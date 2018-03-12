@@ -1,30 +1,59 @@
-<h1>Burgertime!</h1>
+<div id="wrap">
+  <div id="container">
+    <h1>Burgertime!</h1>
 
-<ul>
-  {{#each burger}}
-    {{#unless devoured}}
-      <li>
-        {{burger_name}}
-        <button class="eat" data-id="{{this.id}}">Eat me!</button>
-      </li>
-    {{/unless}}
-  {{/each}}
-</ul>
-<ul>
-  {{#each burger}}
-    {{#if devoured}}
-      <li>
-        {{burger_name}}
-        <button class="delete" data-id="{{this.id}}">Delete me!</button>
-      </li>
-    {{/if}}
-  {{/each}}
-</ul>
+    <form class="create-form">
+      <div class="form-group">
+        <label for="burger">Add a burger: </label>
+        <input type="text" id="newBurger" name="name">
+      </div>
+      <button type="submit">Submit</button>
+    </form> 
 
-<form class="create-form">
-  <div class="form-group">
-    <label for="burger">Add a burger: </label>
-    <input type="text" id="newBurger" name="name">
-  </div>
-  <button type="submit">Submit</button>
-</form>
+    <ul id="uneaten">
+      {{#each burger}}
+        {{#unless devoured}}
+          <li>
+            {{burger_name}}
+            <button class="eat" data-id="{{this.id}}">Eat me!</button>
+          </li>
+        {{/unless}}
+      {{/each}}
+    </ul>
+    <ul id="eaten">
+      {{#each burger}}
+        {{#if devoured}}
+          <li>
+            {{burger_name}}
+            <button class="delete" data-id="{{this.id}}">Delete me!</button>
+          </li>
+        {{/if}}
+      {{/each}}
+    </ul>
+
+  </div> <!-- container -->
+</div>
+<footer>
+  <a href="https://github.com/ModularProductions/burger">GitHub Repo</a> | <a href="#" class="disclaimer">Disclaimer</a>
+</footer>
+<div id="disclaimer" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Best Match</h4>
+      </div>
+      <div class="modal-body">
+        <p>This website claims no affiliation with the classic game Burgertime. It simply exists as a demonstration of certain web development</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script type="text/javascript">
+  $(".disclaimer").on("click", function() {
+    $("#disclaimer").modal("toggle");
+  });
+</script>

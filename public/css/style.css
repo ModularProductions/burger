@@ -1,0 +1,128 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 150%;
+  height: 100%;
+  color: white;
+}
+
+html {
+  background-image: url("../images/grill.jpg");
+
+}
+  
+#wrap {
+}
+
+body {
+  border-left: 3px solid #917321;
+  border-right: 3px solid #917321;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: black;
+  background-image: url("../images/background.jpg");
+  background-position: right bottom 30px;
+  background-repeat: no-repeat;
+}
+
+#container {
+  padding: 20px;
+  padding-bottom: 30px; /* your footer height */
+  height: 100%;
+}
+
+p {
+
+}
+
+a {
+  color: #aaa
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+
+}
+
+#uneaten, #eaten {
+  border: solid 1px rgb(223, 220, 55);
+  width: 50%;
+  padding: 15px;
+  background-color: black;
+}
+
+li {
+  list-style: none;
+
+  /* display: inline-block; */
+}
+form {
+  /* text-align: center; */
+  float: right;
+  width: 45%
+}
+
+.form-group {
+  /* display: inline-block; */
+}
+
+input[type=text], input[type=email], textarea {
+  display: block;
+}
+
+input[type=submit] {
+
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+header {
+
+}
+
+nav {
+
+}
+
+section {
+
+}
+
+footer {
+  border-top: 3px solid #917321;
+  height: 30px; /* your footer height */
+  margin-top: -30px; /* your footer height as negative amount */
+  overflow: hidden;
+  line-height: 30px;
+  text-align: center;
+}
+
+/* Tablet Portrait */
+@media screen and (min-width: 600px) {
+  
+}
+
+/* Tablet Landscape */
+@media screen and (min-width: 900px) {
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+
+}
+
+/* Big Desktop */
+@media screen and (min-width: 1800px) {
+
+}
+
